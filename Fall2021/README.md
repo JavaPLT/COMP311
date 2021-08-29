@@ -15,11 +15,11 @@ This class provides an introduction to functional programming. Functional progra
 
 ## Office Hours
 
-|   |   |   |   |   |
-|---|---|---|---|---|
-| Corky | TBA  |
-| Agnishom  | TBA  |
-| Chatham Abate  | TBA |
+|   |   Time  |  Location | 
+|---|---|---|
+| Corky | TBA  | TBA |
+| Agnishom  | TBA  | TBA |
+| Chatham Abate  | TBA | TBA |
 
 ## Lecture Schedule
 
