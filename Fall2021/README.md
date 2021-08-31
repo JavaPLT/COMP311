@@ -26,7 +26,7 @@ This class provides an introduction to functional programming. Functional progra
 | Week  | Day   | Date | Lecture Topic and Resources  | Work Assigned  | Work Due|
 |---|---|---|---|---|---|
 |  1|   |   |   |   |   |
-|   |Th | Aug 26  | ...  | ...  | ... |
+|   |Th | Aug 26  | [Class Recording](https://riceuniversity.zoom.us/rec/play/YiiUKL6YKF7YzHC01_4JObmFygpInCms0G8o8hltgNJhGm1e-ZWX5Y336kmMX1aCAPdW9KATelVhMqYQ.JYFPRTqps0F4Ax0X?continueMode=true&_x_zm_rtaid=qyNdE9kNTrmCjol27DUyUA.1630254513884.bdd529a4f78486a0e0b41e88126e7940&_x_zm_rhtaid=985)  | ...  | ... |
 |  2|Tu | Aug 31  | ...  | ...  | ... |
 |   |Th | Sep 2  | ...  | ...  | ... |
 |  3|Tu | Sep 7  | ...  | ...  | ... |
