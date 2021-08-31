@@ -18,7 +18,7 @@ This class provides an introduction to functional programming. Functional progra
 |   |   Time  |  Location | 
 |---|---|---|
 | Corky | TBA  | TBA |
-| Agnishom  | TBA  | TBA |
+| Agnishom  | Monday, 1600 - 1800 hrs  | Courtyard between Student Center and Rice Memorial Chapel |
 | Chatham Abate  | TBA | TBA |
 
 ## Lecture Schedule
