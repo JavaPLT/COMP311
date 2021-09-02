@@ -29,7 +29,7 @@ This class provides an introduction to functional programming. Functional progra
 |---|---|---|---|---|---|
 |  1|   |   |   |   |   |
 |   |Th | Aug 26  | [Class Recording](https://riceuniversity.zoom.us/rec/play/YiiUKL6YKF7YzHC01_4JObmFygpInCms0G8o8hltgNJhGm1e-ZWX5Y336kmMX1aCAPdW9KATelVhMqYQ.JYFPRTqps0F4Ax0X?continueMode=true&_x_zm_rtaid=qyNdE9kNTrmCjol27DUyUA.1630254513884.bdd529a4f78486a0e0b41e88126e7940&_x_zm_rhtaid=985)  | ...  | ... |
-|  2|Tu | Aug 31  | ...  | ...  | ... |
+|  2|Tu | Aug 31  | [Class Recording](https://riceuniversity.zoom.us/rec/share/l03sozqOVw_6bMG6C0W--aufq-VypKA_UzbZtuxnhiUbRl-YgZR1IA0m5cTyXZRb.csO9q2ebcCPUQfcm)  | ...  | ... |
 |   |Th | Sep 2  | ...  | ...  | ... |
 |  3|Tu | Sep 7  | ...  | ...  | ... |
 |   |Th | Sep 9  | ...  | ...  | ... |
