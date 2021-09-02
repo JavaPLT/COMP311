@@ -5,7 +5,7 @@ In Fall 2021, we will eventually move over the resources to GitHub Pages. This i
 ---
 
 * Instructors: Robert (Corky) Cartwright `(cork at rice dot edu)`
-* TAs: Agnishom Chattopadhyay `(agnishom at rice dot edu)`, Chatham Abate `(caa8 at rice dot edu)`
+* TAs: Agnishom Chattopadhyay `(agnishom at rice dot edu)`, Chatham Abate `(caa8 at rice dot edu)`, Henry Ding `(sd98 at rice dot edu)`
 * Lectures: DH 1055 (McMurtry Auditorium), Tuesdays + Thursdays (9:25 AM)
 * Online Discussion: [Piazza](https://piazza.com/class/ks9jn96n3o73aq)
 
@@ -20,6 +20,8 @@ This class provides an introduction to functional programming. Functional progra
 | Corky | TBA  | TBA |
 | Agnishom  | Monday, 1600 - 1800 hrs  | Courtyard between Student Center and Rice Memorial Chapel |
 | Chatham Abate  | TBA | TBA |
+| Henry Ding  | Friday, 12:00 - 2:00pm | Duncan Hall Floor 3 In Front of Ken Kennedy Coference Room |
+| Lize Chen  | TBA | TBA |
 
 ## Lecture Schedule
 
