@@ -1,6 +1,6 @@
 In Fall 2020, the official course website was at [link](https://wiki.rice.edu/confluence/display/FPSCALA/2020-Fall).
 
-In Fall 2021, we will eventually move over the resources to GitHub Pages. This is a work in progress
+In Fall 2021, we will eventually move over the resources to GitHub Pages. This is a work in progress...
 
 ---
 
@@ -15,7 +15,7 @@ This class provides an introduction to functional programming. Functional progra
 
 ## Office Hours
 
-|   |   Time  |  Location | 
+|   |   Time  |  Location |
 |---|---|---|
 | Corky | TBA  | TBA |
 | Agnishom  | Monday, 1600 - 1800 hrs  | Courtyard between Student Center and Rice Memorial Chapel |
@@ -60,4 +60,3 @@ This class provides an introduction to functional programming. Functional progra
 |  16|Tu | Dec 7  | ...  | ...  | ... |
 |   |Th | Dec 9  | ...  | ...  | ... |
 |  16|Tu | Dec 14  | END OF SEMESTER  | ...  | ... |
-
