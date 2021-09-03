@@ -1,0 +1,669 @@
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>Racket HW Guide</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+#main {
+    padding-bottom: 1em !important; /* The default padding of 6em is too mu=
+ch for printouts */
+}
+
+body {
+    font-family: Arial, Helvetica, FreeSans, sans-serif;
+    font-size: 10pt;
+    line-height: 1.2;
+}
+
+body, #full-height-container, #main, #page, #content, .has-personal-sidebar=
+ #content {
+    background: #fff    !important;
+    color: #000         !important;
+    border: 0           !important;
+    width: 100%         !important;
+    height: auto        !important;
+    min-height: auto    !important;
+    margin: 0           !important;
+    padding: 0          !important;
+    display: block      !important;
+}
+
+a, a:link, a:visited, a:focus, a:hover, a:active {
+    color: #000;
+}
+#content h1,
+#content h2,
+#content h3,
+#content h4,
+#content h5,
+#content h6 {
+    font-family: Arial, Helvetica, FreeSans, sans-serif;
+    page-break-after: avoid;
+}
+pre {
+    font-family: Monaco, "Courier New", monospace;
+}
+
+#header,
+.aui-header-inner,
+#navigation,
+#sidebar,
+.sidebar,
+#personal-info-sidebar,
+.ia-fixed-sidebar,
+.page-actions,
+.navmenu,
+.ajs-menu-bar,
+.noprint,
+.inline-control-link,
+.inline-control-link a,
+a.show-labels-editor,
+.global-comment-actions,
+.comment-actions,
+.quick-comment-container,
+#addcomment {
+    display: none !important;
+}
+
+.comment .date::before {
+    content: none !important; /* remove middot for print view */
+}
+
+h1.pagetitle img {
+    height: auto;
+    width: auto;
+}
+
+.print-only {
+    display: block;
+}
+#footer {
+    position: relative !important; /* CONF-17506 Place the footer at end of=
+ the content */
+    margin: 0;
+    padding: 0;
+    background: none;
+    clear: both;
+}
+
+#poweredby {
+    border-top: none;
+    background: none;
+}
+
+#poweredby li.print-only {
+    display: list-item;
+    font-style: italic;
+}
+
+#poweredby li.noprint {
+    display:none;
+}
+
+
+/* no width controls in print */
+.wiki-content .table-wrap,
+.wiki-content p,
+.panel .codeContent,
+.panel .codeContent pre,
+.image-wrap {
+    overflow: visible !important;
+}
+
+/* TODO - should this work? */
+#children-section,
+#comments-section .comment,
+#comments-section .comment .comment-body,
+#comments-section .comment .comment-content,
+#comments-section .comment p {
+    page-break-inside: avoid;
+}
+
+#page-children a {
+    text-decoration: none;
+}
+
+/**
+ hide twixies
+
+ the specificity here is a hack because print styles
+ are getting loaded before the base styles. */
+#comments-section.pageSection .section-header,
+#comments-section.pageSection .section-title,
+#children-section.pageSection .section-header,
+#children-section.pageSection .section-title,
+.children-show-hide {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.children-show-hide.icon {
+    display: none;
+}
+
+/* personal sidebar */
+.hnbsp;created using Racket block comment brackets <strong><code>#|</code></=
+strong> and <strong><code>|#</code></strong> (sometimes called <em>bookends=
+</em>).&nbsp;</li>
+</ol></li>
+</ol>
+<ul>
+<li>Note that you can create your entire homework file including solutions =
+to expository problems using the DrRacket editor.</li>
+</ul>
+<h3 id=3D"RacketHWGuide-Handevaluationproblems">Hand evaluation problems</h=
+3>
+<ul>
+<li>Most expository problems will be hand-evaluation problems where you are asked to evaluate 
+a particular Racket program invocation. You must format your hand evaluation exactly like our
+examples (except you will need to insert a comment escape character if the evaluation is embedded
+in a Racket file with executable Racket code.
+<ul>
+<li><p>Example 1: Hand evaluation</p>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"theme: Confluence; brush: java; gutter: false" style=3D"font-size:12px;">        Given
+=09           (define poly (lambda (x y) (+ (expt 2 x) y)))
+               (poly 3 5)
+            =3D&gt; ((lambda (x y) (+ (expt 2 x) y)) 3 5)
+            =3D&gt; (+ (expt 2 3) 5))
+            =3D&gt; (+ 8 5)
+            =3D&gt; 13
+</pre>=20
+</div>
+</div></li>
+<li><p>Example 2: Hand evaluation</p>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"theme: Confluence; brush: java; gutter: false" style=3D"font-size:12px;">        Given
+=09           (define fact (lambda (n) (if (zero? n) 1 (* n (fact (- n 1))))))
+               (fact 4)
+            =3D&gt; (if (zero? 4) 1 (* 4 (fact (- 4 1))))
+            =3D&gt; (if false 1 (* 4 (fact (- 4 1))))
+            =3D&gt; (* 4 (fact (- 4 1)))
+            =3D&gt; (* 4 (fact 3))
+            =3D&gt; (* 4 (if (zero? 3) 1 (* 3 (fact (- 3 1)))))
+            =3D&gt; (* 4 (if false 1 (* 3 (fact (- 3 1)))))
+            =3D&gt; (* 4 (* 3 (fact (- 3 1))))
+            =3D&gt; (* 4 (* 3 (fact 2)))
+            =3D&gt; (* 4 (* 3 (if (zero? 2) 1 (* 2 (fact (- 2 1))))))
+            =3D&gt; (* 4 (* 3 (if false 1 (* 2 (fact (- 2 1))))))
+            =3D&gt; (* 4 (* 3 (* 2 (fact (- 2 1)))))
+            =3D&gt; (* 4 (* 3 (* 2 (fact 1))))
+            =3D&gt; (* 4 (* 3 (* 2 (if (zero? 1) 1 (* 1 (fact (- 1 1)))))))
+            =3D&gt; (* 4 (* 3 (* 2 (if false 1 (* 1 (fact (- 1 1)))))))
+            =3D&gt; (* 4 (* 3 (* 2 (* 1 (fact (- 1 1))))))
+            =3D&gt; (* 4 (* 3 (* 2 (* 1 (fact 0)))))
+            =3D&gt; (* 4 (* 3 (* 2 (* 1 (if (zero? 0) 1 (* 0 (fact (- 0 1))=
+))))))
+            =3D&gt; (* 4 (* 3 (* 2 (* 1 (if true 1 (* 0 (fact (- 0 1)))))))=
+)
+            =3D&gt; (* 4 (* 3 (* 2 (* 1 1))))
+            =3D&gt; (* 4 (* 3 (* 2 1)))
+            =3D&gt; (* 4 (* 3 2))
+            =3D&gt; (* 4 6)
+            =3D&gt; 24
+</pre>=20
+</div>
+</div></li>
+</ul></li>
+</ul>
+<h2 id=3D"RacketHWGuide-Programmingproblems">Programming problems</h2>
+<ul>
+<li>Most of your homework problems will be programming problems.</li>
+<li>Half (50%) of your grade on programming problems depends on good style =
+and following the recipe (program grading is described in detail on the <a =
+class=3D"unresolved" href=3D"#">homework grading page</a>). In particular, =
+these points will be based on
+<ul>
+<li>30% for following the design recipe carefully and documenting your prog=
+ram <em>as you are taught in this course</em> (see below), and</li>
+<li>20% for good programming style <em>as taught in the course</em>.</li>
+</ul></li>
+<li>The other half of your grade will be based on demonstrated correctness:
+<ul>
+<li>30% for passing all of our tests; and</li>
+<li>20% for constructing a comprehensive set of unit tests for each functio=
+n in your program.</li>
+</ul></li>
+</ul>
+<ul>
+<li>All assigned programming problems should be done in the same <code>.rkt=
+&nbsp;</code>file.</li>
+<li><p>At the top of your programming solution file, please put a header wi=
+th the assignment number, your name, and your e-mail address like this:</p>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"theme: Confluence; brush: java; gutter: false" style=3D"font-=
+size:12px;">      ;; COMP 311 HW #01
+      ;; Christopher Warrington &lt;chrisw@rice.edu&gt;
+</pre>=20
+</div>
+</div></li>
+<li>Strictly follow the formatting and documentation directives given below=
+ under the heading <strong>Requirements</strong>. The easiest way to follow=
+ these requirements is to imitate the Sample Program solution below.</li>
+</ul>
+<h1 id=3D"RacketHWGuide-Requirements">Requirements</h1>
+<p>You must include a data definition and corresponding template for each f=
+orm of data processed used in your homework submissions unless instructed o=
+therwise. You only need to include a data definition and corresponding temp=
+late once for an assignment, not once for every problem that uses that data=
+ defintion.</p>
+<h2 id=3D"RacketHWGuide-DataDefinitionsandTemplates%3A">Data Definitions an=
+d Templates:</h2>
+<p>You need to devise (and document) your data design before you start writ=
+ing functions that process this data. Data definitions should be documented=
+ as follows:</p>
+<ul>
+<li><p>Example 3. Data definition of <em>shape</em>:</p>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"theme: Confluence; brush: java; gutter: false" style=3D"font-=
+size:12px;">      ;; A shape is either
+      ;; * a triangle (make-triangle b h),
+      ;;   where b and h are positive-reals
+      ;; * a square (make-square s),
+      ;;   where s is a positive-real.
+      (define-struct triangle (base height))
+      (define-struct square (side))
+      ;;
+      ;; Examples:
+      ;; (make-triangle 1 2)
+      ;; (make-triangle 2 5)
+      ;; (make-square 4)
+      ;; (make-square 2.5)
+      ;;
+      ;; Template for shape
+      #|
+      ;; shape-function : shape -&gt; ...
+      (define (shape-function ... shape ...)
+        (cond [(triangle? shape) ... (triangle-base shape)   ...
+                                 ... (triangle-height shape) ...]
+              [(square? shape)   ... (square-side shape)     ...]))
+      |#
+</pre>=20
+</div>
+</div></li>
+<li><p>Example 4. Data definition of <em>list-of-numbers</em>:</p>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"theme: Confluence; brush: java; gutter: false" style=3D"font-=
+size:12px;">      ;; A list-of-numbers is either
+      ;;    empty, or
+      ;;    (cons n lon)
+      ;; where n is a number, and lon is a list-of-numbers
+      ;;
+      ;; Examples:
+      ;; empty
+      ;; (cons 1 empty)
+      ;; (cons 1 (cons 4 empty))
+      ;;
+      ;; Template for list-of-numbers
+      #|
+      ;; lon-f : list-of-numbers -&gt; ...
+      (define (lon-f ... a-lon ...)
+        (cond
+          [(empty? a-lon) ...]
+          [(cons? a-lon) ... (first a-lon) ...
+                         ... (lon-f ... (rest a-lon) ...) ... ]))
+      |#
+</pre>=20
+</div>
+</div></li>
+<li>Once your have written a data definition, you can use it in the rest of=
+ the assignment.</li>
+<li>The template for writing a function that processes a particular kind of=
+ data (data type) is based <strong>only</strong> on the corresponding data =
+definition, <strong>not</strong> on the particular functions that you happe=
+n define on that type. Hence, there is only one template per data type. Thi=
+s same template is used as the starting point for writing all functions tha=
+t process that data type.</li>
+<li>If the type is a structure, the template should include the field extra=
+ction operations. If the type is a union, the template needs to have an app=
+ropriate <code>cond</code> statement (see example 3). If the type is recurs=
+ive, the template includes the expected recursive calls on the recursive da=
+ta components (see example 4).</li>
+</ul>
+<h2 id=3D"RacketHWGuide-Basicformofafunctiondefinition">Basic form of a fun=
+ction definition</h2>
+<ul>
+<li>The basic form for each function that you write, including axillary and=
+ local functions, is as follows:
+<ul>
+<li><p>Example 5. Function definition for <em>computing area of a ring</em>=
+:</p>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"theme: Confluence; brush: java; gutter: false" style=3D"font-=
+size:12px;">            ;; area-of-ring : positive-real-number positive-rea=
+l-number -&gt; positive-real-number
+            ;; Purpose: to compute the area of a ring whose radius is
+            ;; outer and whose hole has a radius of inner
+            ;;
+            ;; Examples:
+            ;; (area-of-ring 5 3) =3D&gt; 50.24
+            ;; (area-of-ring 5 0) =3D&gt; 78.5
+            ;;
+            ;; Template Instantiation: (degenerate)
+            #|
+            (define (area-of-ring outer inner) ...)
+            |#
+            ;; Code:
+
+            (define (area-of-ring outer inner)
+              (- (area-of-disk outer)
+                 (area-of-disk inner)))
+
+            ;; Test Examples:
+            (check-expect (area-of-ring 5 3) 50.24)
+            (check-expect (area-of-ring 5 0) 78.5)
+            ...
+            ;; Provide enough examples and tests to show you tested thoroug=
+hly
+</pre>=20
+</div>
+</div></li>
+<li><p>Example 6. Function definition for <em>computing product of list-of-=
+number</em>:</p>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"theme: Confluence; brush: java; gutter: false" style=3D"font-=
+size:12px;">            ;; product-of-lon : list-of-numbers -&gt; number
+            ;; to compute the product of numbers in a list
+            ;; assuming product of empty list is 1
+
+            ;; Examples:
+            ;; (product-of-lon empty) =3D&gt; 1
+            ;; (product-of-lon (cons 2 empty)) =3D&gt; 2
+            ;; (product-of-lon (cons 3 (cons 2 empty))) =3D&gt; 6
+
+            ;; Template instantiation
+            #|
+             (define (product-of-lon a-lon)
+               (cond
+                 [(empty? a-lon) ...]
+                 [(cons? a-lon) ... (first a-lon) ...
+                                ... (product-of-lon (rest a-lon)) ... ]))
+            |#
+
+            ;; Code
+            (define (product-of-lon a-lon)
+              (cond
+                 [(empty? a-lon) 1]
+                 [(cons? a-lon) (* (first a-lon)
+                                   (product-of-lon (rest a-lon)))]))
+
+            ;; Test Examples:
+            (check-expect (product-of-lon empty) 1)
+            (check-expect (product-of-lon (cons 2 empty)) 2)
+            (check-expect (product-of-lon (cons 3 (cons 2 empty))) 6)
+            ;; Provide enough examples and tests to show you tested thoroug=
+hly
+</pre>=20
+</div>
+</div></li>
+</ul></li>
+<li>Remember to follow the design recipe.</li>
+<li>It is important that things are presented in this order, so that is cle=
+ar that you know the correct order for doing things.</li>
+<li>You are allowed to use the <code><strong>equal?</strong></code> test <s=
+trong>only</strong> for testing. You are not allowed to use it anywhere els=
+e in the code.</li>
+<li>If your examples get too big, then simply <code>define</code> a name fo=
+r that big argument somewhere before you use it. You can use this name both=
+ in your comments in the example section and in the test cases in the Tests=
+ section.</li>
+<li>Be sure to test throughly. Corner cases and edge cases should be tested=
+. For example, when dealing with numerical functions, <code>0</code> and <c=
+ode>1</code> are often good test cases.</li>
+<li>When testing lists, make sure you test the following cases:
+<ul>
+<li>empty list: <code><strong>empty</strong></code></li>
+<li>list with one element: ex: <code><strong>(cons 3 empty)</strong></code>=
+</li>
+<li>list with more than one element: ex: <code><strong>(cons 1 (cons 3 (con=
+s 3 (cons 7 empty))))</strong></code></li>
+</ul></li>
+<li>Local functions cannot be tested individually, so specific tests are no=
+t required for them. However, you main function's tests need to be comprehe=
+nsive enough to test the local functions.</li>
+</ul>
+<h2 id=3D"RacketHWGuide-SampleSolutiontoaProgrammingProblemSampleSolution">=
+Sample Solution to a Programming Problem<span class=3D"confluence-anchor-li=
+nk" id=3D"RacketHWGuide-SampleSolution"></span></h2>
+<p>The following text is a good solution to the problem of sorting a list o=
+f numbers into ascending order; it pulls together all of the specific piece=
+s of design documentation, code documentation, and testing mentioned above.=
+ It would be better if it included a few more appropriately chosen tests.</=
+p>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"theme: Confluence; brush: java; gutter: false" style=3D"font-=
+size:12px;">;; COMP 311 HW #Sample
+;; Corky Cartwright &lt;cork@rice.edu&gt;
+
+;; A list-of-numbers is either:
+;;   empty, or
+;;   (cons n alon) where n is a number and alon is a list-of-numbers
+;;
+;; Examples:
+;;   empty
+;;   (cons 10 (cons -1 (cons 5 empty))) =3D '(10 -1 5)
+;;   (cons 1 (cons 2 (cons 3 empty)))   =3D '(1 2 3)
+;;   (cons 3 (cons 2 (cons 1 empty)))   =3D '(3 2 1)
+
+#| Template: (enclosed in block comment brackets)
+   (define (lon-f ... a-lon ...)
+     (cond
+       [(empty? a-lon) ...]
+       [(cons? a-lon) ... (first a-lon) ...
+                      ... (lon-f ... (rest a-lon) ...) ... ]))
+|#
+
+;; Main function: sort
+
+;; Contract and purpose:
+;; sort: list-of-numbers -&gt; list-of-numbers
+;; Purpose: (sort alon) returns the a list with same elements (including du=
+plicates) as alon but in ascending order.
+
+;; Examples:
+;; (sort empty) =3D empty
+;; (sort '(0)) =3D '(0)
+;; (sort '(1 2 3)) =3D '(1 2 3)
+;; (sort '(3 2 1)) =3D '(1 2 3)
+;; (sort '(10 -1 10 -20 5)) =3D (-20 -1 5 10 10)
+
+#| Template Instantiation:
+   (define (sort a-lon)
+     (cond
+       [(empty? a-lon) ...]
+       [(cons? a-lon) ... (first a-lon) ...
+                      ... (sort (rest a-lon)) ... ]))
+|#
+;; Code:
+
+   (define (sort a-lon)
+     (cond
+       [(empty? a-lon) empty]
+       [(cons? a-lon) (insert (first a-lon) (sort (rest a-lon)))]))
+
+;; Tests
+(check-expect (sort empty) empty)
+(check-expect (sort '(0)) '(0))
+(check-expect (sort '(1 2 3)) '(1 2 3))
+(check-expect (sort '(3 2 1)) '(1 2 3))
+(check-expect (sort '(10 -1 10 -20 5)) '(-20 -1 5 10 10))
+
+;; Auxiliary function
+
+;; Contract and purpose
+;; insert: number list-of-numbers -&gt; list-of-numbers
+;; Purpose: (insert n alon), where alon is in increasing order, returns a l=
+ist containing n and the elts of alon in ascending order
+
+;; Examples:
+
+;;  (insert 17 empty) =3D '(17)
+;;  (insert 17 '(17)) =3D '(17 17)
+;;  (insert 4 '(1 2 3)) =3D '(1 2 3 4)
+;;  (insert 0 '(1 2 3)) =3D '(0 1 2 3)
+;;  (insert 2 '(1 1 3 4)) =3D '(1 1 2 3 4)
+
+#| Template instantiation
+   (define (insert n a-lon)
+     (cond
+       [(empty? a-lon) ...]
+       [(cons? a-lon) ... (first a-lon) ...
+                      ... (insert n (rest a-lon)) ... ]))
+|#
+
+;; Code
+   (define (insert n a-lon)
+     (cond
+       [(empty? a-lon) (cons n empty)]
+       [(cons? a-lon)
+        (if (&lt;=3D n (first a-lon)) (cons n a-lon)
+            (cons (first a-lon) (insert n (rest a-lon))))]))
+;; Tests
+
+(check-expect (insert 17 empty) '(17))
+(check-expect (insert 17 '(17)) '(17 17))
+(check-expect (insert 4 '(1 2 3)) '(1 2 3 4))
+(check-expect (insert 0 '(1 2 3)) '(0 1 2 3))
+(check-expect (insert 2 '(1 1 3 4)) '(1 1 2 3 4))
+</pre>=20
+</div>
+</div>
+<p><strong>Note</strong>: the Examples and Tests for each function above ca=
+n be collapsed into a single entry by cutting out each Tests block and past=
+ing it over the corresponding Examples block. Forward references in <code>c=
+heck-expect</code> invocations work because the execution of <code>check-ex=
+pect</code> code is deferred to the end of the contents of the definitions =
+pane. For example, the <code>Auxiliary function</code> part can be rewritte=
+n as follows:</p>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"theme: Confluence; brush: java; gutter: false" style=3D"font-=
+size:12px;">;; Auxiliary function
+
+;; Contract and purpose
+;; insert: number list-of-numbers -&gt; list-of-numbers
+;; Purpose: (insert n alon), where alon is in increasing order, returns a l=
+ist containing n and the elts of alon in ascending order
+
+;; Examples and Tests:
+
+(check-expect (insert 17 empty) '(17))
+(check-expect (insert 17 '(17)) '(17 17))
+(check-expect (insert 4 '(1 2 3)) '(1 2 3 4))
+(check-expect (insert 0 '(1 2 3)) '(0 1 2 3))
+(check-expect (insert 2 '(1 1 3 4)) '(1 1 2 3 4))
+
+#| Template instantiation
+   (define (insert n a-lon)
+     (cond
+       [(empty? a-lon) ...]
+       [(cons? a-lon) ... (first a-lon) ...
+                      ... (insert n (rest a-lon)) ... ]))
+|#
+
+;; Code
+   (define (insert n a-lon)
+     (cond
+       [(empty? a-lon) (cons n empty)]
+       [(cons? a-lon)
+        (if (&lt;=3D n (first a-lon)) (cons n a-lon)
+            (cons (first a-lon) (insert n (rest a-lon))))]))
+</pre>=20
+</div>
+</div>
+<h2 id=3D"RacketHWGuide-4.TerminationArgument%3A%28ForChapter23onwardsonly%=
+29">4. Termination Argument: (For Chapter 23 onwards only)</h2>
+<p>If the template does not guarantee that a function terminates, you are r=
+equired to explain why that function will terminate for all possible inputs=
+.</p>
+<ul>
+<li><p>Example 7. Termination argument for <code>quick-sort</code> :</p>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"theme: Confluence; brush: java; gutter: false" style=3D"font-=
+size:12px;">      ;; quick-sort list-of-number -&gt; list-of-number
+      ;; Purpose: (quick-sort lon) sorts lon into ascending order
+      ;;
+      ;; Examples:
+      ;; (quick-sort empty) =3D&gt; empty
+      ;; (quick-sort '(1)) =3D&gt; '(1)
+      ;; (quick-sort '(1 4 3 5)) =3D&gt; '(1 3 4 5)
+      ;; (quick-sort '(1 4 3 4 2 5)) =3D&gt; '(1 2 3 4 4 5)
+      ;;
+      ;; Termination:
+      ;; On each call, quick-sort partitions the list alon into three subli=
+sts using
+      ;; smaller-than, larger-than, and equal-to.  The lists produced by sm=
+aller-than
+      ;; and larger-than are sorted using recursive applications of quick-s=
+ort. Since
+      ;; the lists produced by smaller-than and larger-than are strictly sh=
+orter than
+      ;; alon (the given list), quick-sort terminates.
+      (define (quick-sort alon)
+        (cond
+          [(empty? alon) empty]
+          [else (append (quick-sort (smaller-items alon (first alon)))
+                        (equal-to alon (first alon))
+                        (quick-sort (larger-items alon (first alon))))]))
+
+      &quot;Testing quick-sort:&quot;
+      ...
+</pre>=20
+</div>
+</div></li>
+</ul>
+    </div>
+</body>
+</html>
+------=_Part_8538_987032731.1630566748534--
