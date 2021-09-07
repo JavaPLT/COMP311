@@ -20,7 +20,7 @@ This class provides an introduction to functional programming. Functional progra
 | Corky | TBA  | TBA |
 | Agnishom  | Monday, 1600 - 1800 hrs  | Courtyard between Student Center and Rice Memorial Chapel |
 | Chatham Abate  | TBA | TBA |
-| Henry Ding  | Friday, 12:00 - 2:00pm | Duncan Hall Floor 3 In Front of Ken Kennedy Coference Room |
+| Henry Ding  | Friday, 12:00 - 2:00pm | Duncan Hall Floor 3 In Front of Ken Kennedy Conference Room |
 | Lize Chen  | TBA | TBA |
 
 ## Lecture Schedule
