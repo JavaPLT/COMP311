@@ -1,38 +1,36 @@
-;; The first three lines of this file were inserted by DrRacket. They record metadata
-;; about the language level of this file in a form that our tools can easily process.
-#reader(lib "htdp-advanced-reader.ss" "lang")((modname HW02) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #t #t none #f () #f)))
 ;; **Problem 1**
 ;; Given 
 (define-struct BTMNode (key value left right))   ;; abbreviated name for BinaryTreeMapNode
-;; A alpha-BTM (alpha-BinaryTreeMap is either
+;; A (BTMap-of alpha) is either
 ;; * empty, or
 ;; * (make-BTMNode key value left right) where
 ;;   * key is a number;
 ;;   * value is an alpha;
-;;   * left and right are of type alpha-BTMap
+;;   * left and right are of type (BTMap-of alpha)
 
-;; Generic Template for any function f with primary argument a of type alpha-BTM
+;; Generic Template for any function f with primary argument a of type (BTMap of alpha)
 #|
- (define (f ... abstm ...)
-   (cond [(empty? abstm) ...]
+ (define (f ... abtm ...)
+   (cond [(empty? abtm) ...]
          [(BTMNode
-               ... (BTMNode-key abstm)
-               ... (BTMNode-value abstm)
-               ... (f ... (BTMNode-left abstm) ...) 
-               ... (f ... (BTMNode-right abstm) ...) 
+               ... (BTMNode-key abtm)
+               ... (BTMNode-value abtm)
+               ... (f ... (BTMNode-left abtm) ...) 
+               ... (f ... (BTMNode-right abtm) ...) 
                ... ]))
 |#
 
 
-;; An alpha-BSTM (alpha-BinarySearchTreeMap) is an alpha-BTM that is either;
+;; An (BSTMap-of alpha) is an (BTMap-of alpha) that is either:
 ;; * empty, or
-;; * a BTMNode (make-BTMNode k v l r) where every key in l < k and every key in r > k (implying key values are unique)
+;; * a BTMNode (make-BTMNode k v l r) where every key in l is < k and every key in r is > k (implying key values are unique)
 
-;; getBSTM: number BSTM -> symbol
-;; Contract: (getBSTM n abstm) returns the symbol s in the BTMNode matching n if such a BTMNode exists and empty otherwise
+;; getBSTMap: number BSTMap -> symbol | false
+;; Contract: (getBSTMap n abstm) returns the symbol s in the BTMNode matching n if such a BTMNode exists and false otherwise.
+;; Note: Since abstm is ordered as indicated in the definition of the type (BSTMap-of alpha), this search is easy to perform.
 ;; Examples 
 ;; <##your test code goes here##>
-;; Hint: you may want to define some number-BSTM constants to avoid text repetition in your test code
+;; Hint: you may want to define some BSTMap constants to avoid text repetition in your test code
 
 ;; Template Instantiation
 #|
@@ -40,19 +38,19 @@
 |#
 
 ;; Code
-;; <##your code for getBSTM goes here##> (approximately 5 lines)
+;; <##your code for getBSTMap goes here##> (approximately 5 lines)
  
 ;; Analysis: searching trees vs. searching lists
-;;<##your brief (a few lines) discussion goes here##>
+;;<##your brief (a few lines) discussion comparing the efficiency of the two tasks goes here##>
 
 ;; **Problem 2**
-;; In this problem, we assume the programmer and the reader are very familiar with the inductive type alpha-list (listOf alpha), so those associated data definition, examples, and
+;; In this problem, we assume the programmer and the reader are very familiar with the inductive type (list-of alpha), so the associated data definitions, examples, and
 ;; corresponding natural recursion template are omitted here.
 
-;; For the sake of simplicity, we will represent an ordered pair (a,b) of type (alpha,beta) as two element list (list a b).  We will call such a pair an alpha-beta-pair.
+;; For the sake of simplicity, we will represent an ordered pair (a,b) of type (alpha,beta) by the two element list (list a b).  We will call such a pair an alpha-beta-pair.
 
-;; cross: number-list symbol-list -> number-symbol-pair-list
-;; Contract: given a number-list nl and a symbol-list sl, (cross nl sl) returns a list of all possible pairs (n, s) where n is a member of nl and s is a member of sl.
+;; cross: (list-of number) (list-of symbol) -> list-of number-symbol-pair
+;; Contract: given a (list-of number) nl and a (list-of symbol) sl, (cross nl sl) returns a list of all possible pairs (n, s) where n is a member of nl and s is a member of sl.
 ;; Examples:
 (check-expect (cross '(1 2) '(a b c)) '((1 a) (1 b) (1 c) (2 a) (2 b) (2 c)))
 (check-expect (cross '(1 1) '(a b c)) '((1 a) (1 b) (1 c) (1 a) (1 b) (1 c)))
@@ -60,7 +58,7 @@
 
 ;; Template Instantiations for cross
 ;; Hints:
-;; 1. The visible function cross performs natural recursion on one argument (say nl).  Introduce a cross-help function that performs natural recursion on the other argument (say sl).
+;; 1. The visible function cross performs natural recursion on one argument (say nl).  Introduce a cross-help function that performs natural recursion on the other argument (say sl). 
 ;; 2. In developing your code, you may want to write and test cross-help first because it can be tested by itself while cross cannot.
 ;; 3. After giving the template instantiation for cross, show your development of cross-help including type [declaration], contract, and template instantiation.  You may
 ;;    omit examples since they will be generated by your top level tests if your top-level coverage is good.
@@ -77,21 +75,21 @@
 ;;<##Your code for cross and any help functions goes here.##>
 
 ;; Problem 3
-;; As in Problem 2, we assume the programmer and the reader are very familiar with the inductive type alpha-list (listOf alpha).  Hence, the associated data definition, examples, and
+;; As in Problem 2, we assume the programmer and the reader are very familiar with the inductive type (list-of alpha).  Hence, the associated data definitions, examples, and
 ;; corresponding natural recursion template are omitted here.  The function that you must write below is discussed in detail in Section 17.6 of the book.  But we expect you to develop
-;; a better solution given the following guidance.  In your definition of merge, use simple structural case-splitting on both list arguments WITHOUT ANY RECURSION. The second case
+;; a better solution given the following guidance.  In your definition of the merge function, use simple structural case-splitting on both list arguments WITHOUT ANY RECURSION. The second case
 ;; split is nested inside one arm of the first case split; the ordering of the argument queries does not matter.  For the case where the result cannot be immediately computed without
 ;; help (both arguments are non-empty), delegate the remainder of the computation to a help function merge-help.  In contrast to the code for the merge function, the code for
 ;; merge-help function is recursive but its argument types are not identical.  One argument is a non-empty ascending number-list and the other is simply an
-;; ascending number-list.  The template for merge-help case splits on whether the possibly empty list is empty or non-empty and performs quasi-structural recursion (it may
+;; ascending number-list.  The template for merge-help case splits on whether the possibly empty list is empty or non-empty and performs quasi-structural recursion; it may
 ;; swap arguments, but the sum of the length of the two arguments strictly decreases in every call).
 
-;; We will use the prefx (ascending) in front a number-list parameter in a type to indicate that the parameter must be bound to an ascending [technically
-;; non-descending] number-list. We will similarly use the prefix (non-empty) in ffront of a (possibly restriced) number-list parameter to indicate that the parameter must be bound
-;; to a non-empty number-list.
+;; We will use the prefx "(ascending)" in front a (list-of number) parameter in a type to indicate that the parameter must be bound to an ascending [technically
+;; non-descending] (list-of number). We will similarly use the prefix "(non-empty)" in front of a (list-of number) parameter to indicate that the parameter must be bound
+;; to a non-empty (list-of number).
 
-;; merge; (ascending) number-list  (ascending) number-list -> (ascending) number list
-;; Contract: given two ascending number-lists nl1 and nl2, (merge nl1 nl2) returns the list containing all elements in both lists in ascending order
+;; merge: (ascending) (list-of number)  (ascending) (list-of number) -> (ascending) (list-of number)
+;; Contract: given two arguments nl1 and nl2 of type (ascending) (list-of number), (merge nl1 nl2) returns the list containing all elements in both lists in ascending order
 ;; Examples
 ;; <##your examples for merge and merge-help (assuming you define one) go here##>
 ;; Template Instantiation for merge
@@ -110,21 +108,21 @@
 
 (define (fib n) (if (< n 2) 1 (+ (fib (- n 1)) (fib (- n 2)))))
 
-;; <##Your type declaration, contract, examples, and template instantation for fastFib go here.##>
+;; <##Your type [declaration], contract, examples, and template instantation for fastFib go here.##>
 
 ;; Hints;
-;; 1. Your template instantiation for fastFib will be trivial because it will delegate essentially all of the computation to the help function fastFib with the
+;; 1. Your template instantiation for fastFib will be trivial because it will delegate essentially all of the computation to the help function fibHelp with the
 ;;    following description:
 
 ;; fibHelp: nat nat nat -> nat
 ;; Contract: (fibHelp k fn-k-1 fn-k-2) returns (fib n) provided that fn-k-1 = (fib (- n k 1)), fn-k-2 = (fib (- n k 2))
-;; Note: in Racket (- n k i) returns (n-k)-i
+;; Notes: 1. In Racket (- n k i) returns (n-k)-i.  2. fibHelp is a tail-recursive help function that plays exactly the same role as the obvious loop in an efficient imperative program solving the problem.
 ;; Examples (included here to show you how fastFib works
 ;(check-expect (fibHelp 0 1 1) 2)
 ;(check-expect (fibHelp 0 2 1) 3)
 ;(check-expect (fibHelp 1 (fib 9) (fib 8)) (fib 11))
 
-;; 2. You need to fully develop fibHelp as a Racket function; some of what you need appears above in the description of fibHelp including template instantiation.  Examples
+;; 2. You need to fully develop fibHelp as a Racket function; some of the code you need to generate appears in template instantiation for fibHelp, namely the recursive call performed by fibHelp.  Examples
 ;;    for fibHelp are optional but you already have three given above.
 
 ;; Code
