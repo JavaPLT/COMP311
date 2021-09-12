@@ -117,10 +117,10 @@
 ;; fibHelp: nat nat nat -> nat
 ;; Contract: (fibHelp k fn-k-1 fn-k-2) returns (fib n) provided that fn-k-1 = (fib (- n k 1)), fn-k-2 = (fib (- n k 2))
 ;; Notes: 1. In Racket (- n k i) returns (n-k)-i.  2. fibHelp is a tail-recursive help function that plays exactly the same role as the obvious loop in an efficient imperative program solving the problem.
-;; Examples (included here to show you how fastFib works
-;(check-expect (fibHelp 0 1 1) 2)
-;(check-expect (fibHelp 0 2 1) 3)
-;(check-expect (fibHelp 1 (fib 9) (fib 8)) (fib 11))
+;; Examples (included here to show you how fastFib works; they are optional in your submission since fibHelp is a short help function.
+;; (check-expect (fibHelp 0 1 1) 2)
+;; (check-expect (fibHelp 0 2 1) 3)
+;; (check-expect (fibHelp 1 (fib 9) (fib 8)) (fib 11))
 
 ;; 2. You need to fully develop fibHelp as a Racket function; some of the code you need to generate appears in template instantiation for fibHelp, namely the recursive call performed by fibHelp.  Examples
 ;;    for fibHelp are optional but you already have three given above.
