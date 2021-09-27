@@ -343,7 +343,7 @@
      (cond
        [(empty? a-lon) (cons n empty)]
        [(cons? a-lon)
-        (if (= n (first a-lon)) (cons n a-lon)
+        (if (<= n (first a-lon)) (cons n a-lon)
             (cons (first a-lon) (insert n (rest a-lon))))]))
 ;; Tests
 
