@@ -30,14 +30,14 @@ This class provides an introduction to functional programming. Functional progra
 |  1|   |   |   |   |   |
 |   |Th | Aug 26  | [Class Recording](https://riceuniversity.zoom.us/rec/play/YiiUKL6YKF7YzHC01_4JObmFygpInCms0G8o8hltgNJhGm1e-ZWX5Y336kmMX1aCAPdW9KATelVhMqYQ.JYFPRTqps0F4Ax0X?continueMode=true&_x_zm_rtaid=qyNdE9kNTrmCjol27DUyUA.1630254513884.bdd529a4f78486a0e0b41e88126e7940&_x_zm_rhtaid=985), [Slides](https://piazza.com/class_profile/get_resource/ks9jn96n3o73aq/kt5ajxkuo1l1cz)  | ...  | ... |
 |  2|Tu | Aug 31  | [Class Recording](https://riceuniversity.zoom.us/rec/share/l03sozqOVw_6bMG6C0W--aufq-VypKA_UzbZtuxnhiUbRl-YgZR1IA0m5cTyXZRb.csO9q2ebcCPUQfcm)  | ...  | ... |
-|   |Th | Sep 2  | [Class Recording](https://riceuniversity.zoom.us/rec/play/299sy4nKlUiP07Go7-xlycfUaBB4h3hkZEiOuwWYGSHJ0RWYykqizKPMQ2yUHua1rUCSH_E1LQ4S51kd.a_oAt1hH_GQQaG-m?continueMode=true&_x_zm_rtaid=wsaQhPYlQ8e9llzTw2LWCw.1631019239447.926fcb6b1d8df19a3a6e0f7ebcc1f7f8&_x_zm_rhtaid=554)   | ...  | ... |
-|  3|Tu | Sep 7  | [Class Recording](https://riceuniversity.zoom.us/rec/share/NwEqmApt8Ocw8WYfU-XUjLHbuRPFJHKGr1CP2sLfyp14Z4fUFNNhiylSSTNX9fY-.l1wRhVHKiO7hpqfg)  | ...  | ... |
+|   |Th | Sep 2  | [Class Recording](https://riceuniversity.zoom.us/rec/play/299sy4nKlUiP07Go7-xlycfUaBB4h3hkZEiOuwWYGSHJ0RWYykqizKPMQ2yUHua1rUCSH_E1LQ4S51kd.a_oAt1hH_GQQaG-m?continueMode=true&_x_zm_rtaid=wsaQhPYlQ8e9llzTw2LWCw.1631019239447.926fcb6b1d8df19a3a6e0f7ebcc1f7f8&_x_zm_rhtaid=554)   | GitHub Fundamentals  | Sep. 8 |
+|  3|Tu | Sep 7  | [Class Recording](https://riceuniversity.zoom.us/rec/share/NwEqmApt8Ocw8WYfU-XUjLHbuRPFJHKGr1CP2sLfyp14Z4fUFNNhiylSSTNX9fY-.l1wRhVHKiO7hpqfg)  | Assignment 1  | Sep. 10 |
 |   |Th | Sep 9  | [Class Recording](https://riceuniversity.zoom.us/rec/share/W3zhjhPUEWxqlYYz1DwzyXx3wsetuYktjsYKiq8qkpMgb8OvmWdYCcdOBV6msk6u.VWd5Xb8o3yYOYP-L)  | ...  | ... |
-|  4|Tu | Sep 14  | Class Canceled  | ...  | ... |
+|  4|Tu | Sep 14  | Class Canceled  | Assignment 2  | Sep. 20 |
 |   |Th | Sep 16  | [Class Recording](https://riceuniversity.zoom.us/rec/share/h_b5Tg_gSBF8D5hsvatynF65IxnPHeeVDoJ4JHX3AmU2dCk3LqnANhWdecUDt3c2.MzObtjmBhWp76EU-)  | ...  | ... |
-|  5|Tu | Sep 21  | [Class Recording](https://riceuniversity.zoom.us/rec/share/kTKTq4iRpAMU58dJdRAuQdnRhO-MyzExp1XxQxtTqaYuPzDX_x4-_0E_eUML9nOG.g6I5Nva-Nkz9L--b)  | ...  | ... |
+|  5|Tu | Sep 21  | [Class Recording](https://riceuniversity.zoom.us/rec/share/kTKTq4iRpAMU58dJdRAuQdnRhO-MyzExp1XxQxtTqaYuPzDX_x4-_0E_eUML9nOG.g6I5Nva-Nkz9L--b)  | Assignment 3  | Sep. 27 |
 |   |Th | Sep 23  | [Class Recording](https://riceuniversity.zoom.us/rec/share/tIhv7tIHZBJrhdYGNIsiwri1VrwZixPDT9GJSSZKvlNOAweYzSAZixXis1NnfDt0.CsaVo9K9HFMBDN7R)  | ...  | ... |
-|  6|Tu | Sep 28  | [Class Recording](https://riceuniversity.zoom.us/rec/share/dNTKvTw04-A1HxVu1chHXvFdxBCRFxOcEIxleaJQa1WthnKCmbLU15-MBsAenAOA.-RJZYP0MJLqsEOPJ)  | ...  | ... |
+|  6|Tu | Sep 28  | [Class Recording](https://riceuniversity.zoom.us/rec/share/dNTKvTw04-A1HxVu1chHXvFdxBCRFxOcEIxleaJQa1WthnKCmbLU15-MBsAenAOA.-RJZYP0MJLqsEOPJ)  | Assignment 4  | Oct. 4 |
 |   |Th | Sep 30  | [Class Recording](https://riceuniversity.zoom.us/rec/share/oIwIAamBxkZNZBYFSh5QMv7E7cTFvEyo2hlXPLqflulttmB4QwLygeMwqSsknh-i.2MIZglYrbsNjLDK0)  | ...  | ... |
 |  7|Tu | Oct 5  | ...  | ...  | ... |
 |   |Th | Oct 7  | ...  | ...  | ... |
