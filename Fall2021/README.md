@@ -21,7 +21,7 @@ This class provides an introduction to functional programming. Functional progra
 | Agnishom  | Monday, 4 - 6 PM  | Courtyard between Student Center and Rice Memorial Chapel |
 | Chatham Abate  | Wed 7 - 9 PM  | McMurtry Commons |
 | Henry Ding  | Friday, 12 - 2 PM | Duncan Hall Floor 3 In Front of Ken Kennedy Conference Room |
-| Lize Chen  | Wed 12:30-1:30 PM, Fri 3:30-4:30 PM | See piazza -> Resources -> Staff |
+| Lize Chen  | Fri 1 - 2 PM, Fri 3:30-4:30 PM | See piazza -> Resources -> Staff |
 
 ## Lecture Schedule (Canvas -> Announcements -> Lecture Recordings)
 
@@ -39,11 +39,11 @@ This class provides an introduction to functional programming. Functional progra
 |   |Th | Sep 23  | [Class Recording](https://riceuniversity.zoom.us/rec/share/tIhv7tIHZBJrhdYGNIsiwri1VrwZixPDT9GJSSZKvlNOAweYzSAZixXis1NnfDt0.CsaVo9K9HFMBDN7R)  | ...  | ... |
 |  6|Tu | Sep 28  | [Class Recording](https://riceuniversity.zoom.us/rec/share/dNTKvTw04-A1HxVu1chHXvFdxBCRFxOcEIxleaJQa1WthnKCmbLU15-MBsAenAOA.-RJZYP0MJLqsEOPJ)  | Assignment 4  | Oct. 4 |
 |   |Th | Sep 30  | [Class Recording](https://riceuniversity.zoom.us/rec/share/oIwIAamBxkZNZBYFSh5QMv7E7cTFvEyo2hlXPLqflulttmB4QwLygeMwqSsknh-i.2MIZglYrbsNjLDK0)  | ...  | ... |
-|  7|Tu | Oct 5  | ...  | ...  | ... |
-|   |Th | Oct 7  | ...  | ...  | ... |
+|  7|Tu | Oct 5  | [Class Recording](https://riceuniversity.zoom.us/rec/share/sFw_9S0Q24s4LsfSvnA3Jgso7xqPN1tT7nQgwRZrEUDmAAYTaotYzS8tIvxV7VfW.fFbHs5L2Gk2KKg_w)  | ...  | ... |
+|   |Th | Oct 7  | [Class Recording](https://riceuniversity.zoom.us/rec/share/chxKOjgftp_WfQ3S-biAo0jUgo7Lyz9n3IcmX7iKK3wddHDJFU2LgxYYFmANCVaO.EMkQWowQ1SUaZMqf)  | Assignment 5  | Oct. 18 |
 |  8|Tu | Oct 12  | ...  | ...  | ... |
-|   |Th | Oct 14  | ...  | ...  | ... |
-|  9|Tu | Oct 19  | ...  | ...  | ... |
+|   |Th | Oct 14  | [Class Recording](https://riceuniversity.zoom.us/rec/share/Bi6uwClkkTnoAVieyQXSZXYoTkK9vsI5jeMAZXeTTYYP1txgClBAtG1VjxRWRuB_.E384psBe3V6-qRYi)  | ...  | ... |
+|  9|Tu | Oct 19  | [Class Recording](https://riceuniversity.zoom.us/rec/share/yPFKtfmGQvVAYHQIRaN_M1XL505Sl_dJQcmhAoSfalzFuJIBKbYLArrZw4IpcSdn.ppu7E0z-VmlBvibO)  | ...  | ... |
 |   |Th | Oct 21  | ...  | ...  | ... |
 |  10|Tu | Oct 26  | ...  | ...  | ... |
 |   |Th | Oct 28  | ...  | ...  | ... |
