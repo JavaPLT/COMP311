@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Racket Homework Guide</title>
+        <link rel="canonical" href="/confluence/pages/viewpage.action?pageId=40736448" />
+        <!--[if lt IE 9]>
+<link type="text/css" rel="stylesheet" href="/confluence/s/en_GB-1988229788/4252/6ac85e9b14675c5514a674e1aecae99c9505ed36.1/65/_/download/superbatch/css/batch.css?conditionalComment=lt+IE+9" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="/confluence/s/en_GB-1988229788/4252/6ac85e9b14675c5514a674e1aecae99c9505ed36.1/65/_/download/superbatch/css/batch.css?media=print" media="print">
+<link type="text/css" rel="stylesheet" href="/confluence/s/en_GB-1988229788/4252/6ac85e9b14675c5514a674e1aecae99c9505ed36.1/65/_/download/superbatch/css/batch.css" media="all">
+<!--[if gte IE 9]>
+<link type="text/css" rel="stylesheet" href="/confluence/s/en_GB-1988229788/4252/6ac85e9b14675c5514a674e1aecae99c9505ed36.1/65/_/download/superbatch/css/batch.css?conditionalComment=gte+IE+9" media="all">
+<![endif]-->
+<!--[if lte IE 8]>
+<link type="text/css" rel="stylesheet" href="/confluence/s/en_GB-1988229788/4252/6ac85e9b14675c5514a674e1aecae99c9505ed36.1/65/_/download/superbatch/css/batch.css?conditionalComment=lte+IE+8" media="all">
+<![endif]-->
+<!--[if lte IE 9]>
+<link type="text/css" rel="stylesheet" href="/confluence/s/en_GB-1988229788/4252/6ac85e9b14675c5514a674e1aecae99c9505ed36.1/65/_/download/superbatch/css/batch.css?conditionalComment=lte+IE+9" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="/confluence/s/en_GB-1988229788/4252/6ac85e9b14675c5514a674e1aecae99c9505ed36.1/c67de9d11c5f11887ad86006dff3299b/_/download/contextbatch/css/plugin.viewsource/batch.css" media="all">
+<!--[if lt IE 9]>
+<link type="text/css" rel="stylesheet" href="/confluence/s/en_GB-1988229788/4252/6ac85e9b14675c5514a674e1aecae99c9505ed36.1/9417cd82f89a2e54d01bc3956cc05ee1/_/download/contextbatch/css/page/batch.css?conditionalComment=lt+IE+9" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="/confluence/s/en_GB-1988229788/4252/6ac85e9b14675c5514a674e1aecae99c9505ed36.1/9417cd82f89a2e54d01bc3956cc05ee1/_/download/contextbatch/css/page/batch.css" media="all">
+<link type="text/css" rel="stylesheet" href="/confluence/s/en_GB-1988229788/4252/6ac85e9b14675c5514a674e1aecae99c9505ed36.1/c79563fd48bcfee0884ba43d715d312a/_/download/contextbatch/css/editor-content/batch.css" media="all">
+<link type="text/css" rel="stylesheet" href="/confluence/s/en_GB-1988229788/4252/6ac85e9b14675c5514a674e1aecae99c9505ed36.1/1/_/styles/colors.css?spaceKey=FPSCALA" media="all">
+<link type="text/css" rel="stylesheet" href="/confluence/s/en_GB-1988229788/4252/6ac85e9b14675c5514a674e1aecae99c9505ed36.1/1.0/_/download/resources/com.atlassian.confluence.themes.default:styles/default-theme.css" media="all">
+
+</head>
+
+<body class="mceContentBody aui-theme-default wiki-content fullsize">
+<font size = "4b">
+<h1>Racket Homework Guide</h1>      
+<p>This directive describes how to answer both programming problems and expository problems involving Racket.</p>
+
+<h2>Programming problems</h2>
+	<ul>
+    <li>Most of your homework problems will be programming problems.</li>
+    <li>Half (50%) of your grade on programming problems depends on good style and following the design recipe. In particular, these style and documentation points will be based on:
+        <ul>
+        <li>30% for following the design recipe carefully and documenting your program with design information <em>as you are taught in this course</em> (see below), and</li>
+        <li>20% for good programming style <em>as taught in the course</em>.</li>
+        </ul>
+	</li>
+    <li>The other half of your grade will be based on demonstrated correctness:
+        <ul>
+        <li>30% for passing all of our tests; and</li>
+        <li>20% for constructing a comprehensive set of unit tests for each function in your program.</li>
+        </ul>
+	</li>
+    <li>All assigned programming problems should be done in the same <code>.rkt </code>file.</li>
+    <li>At the top of your programming solution file, please put a header with the assignment number, your name, and your e-mail address like this:
+<table class="wysiwyg-macro" data-macro-name="code" style="background-image: url(/confluence/plugins/servlet/confluence/placeholder/macro-heading?definition=e2NvZGV9&amp;locale=en_GB&amp;version=2); background-repeat: no-repeat;" data-macro-body-type="PLAIN_TEXT">
+<tr><td class="wysiwyg-macro-body">
+<pre>
+;; COMP 311 HW #01
+;; Christopher Warrington &lt;chrisw@rice.edu>
+</pre>
+</td></tr>
+</table>
+	</li>
+	<li>
+		Strictly follow the formatting and documentation directives given below under the heading <strong>Requirements</strong>. The easiest way to follow these requirements is to imitate the Sample Program solution below.
+
+		<h3>Requirements</h3>
+			<ul>
+			
+			<li><h4>1. Data Definitions and Templates:</h4>
+				<ul>
+				<li>You need to devise (and document) your data design before you start writing functions that process this data. Data definitions should be documented as follows:
+					<ul>
+				    <li>Programming Example 1: Data definition of <em>shape</em>:
+<table class="wysiwyg-macro" data-macro-name="code" style="background-image: url(/confluence/plugins/servlet/confluence/placeholder/macro-heading?definition=e2NvZGV9&amp;locale=en_GB&amp;version=2); background-repeat: no-repeat;" data-macro-body-type="PLAIN_TEXT">
+<tr><td class="wysiwyg-macro-body">
+<pre>
+;; A shape is either
+;; * a triangle (make-triangle b h) where b and h are positive-reals
+;; * a square (make-square s) where s is a positive-real.
+(define-struct triangle (base height))
+(define-struct square (side))
+;;
+;; Examples:
+;; (make-triangle 1 2)
+;; (make-triangle 2 5)
+;; (make-square 4)
+;; (make-square 2.5)
+;;
+;; Template for shape
+#|
+;;shape-function : shape -> ...
+(define (shape-function ... shape ...)
+    (cond [(triangle? shape) ... (triangle-base shape)   ...
+                             ... (triangle-height shape) ...]
+          [(square? shape)   ... (square-side shape)     ...]))
+|#
+</pre>
+</td></tr>
+</table>
+                    </li>
+                    <li>Programming Example 2: Data definition of <em>list-of-numbers</em>:
+<table class="wysiwyg-macro" data-macro-name="code" style="background-image: url(/confluence/plugins/servlet/confluence/placeholder/macro-heading?definition=e2NvZGV9&amp;locale=en_GB&amp;version=2); background-repeat: no-repeat;" data-macro-body-type="PLAIN_TEXT">
+<tr><td class="wysiwyg-macro-body"><pre>  
+;; A list-of-numbers is either
+;;    empty, or
+;;    (cons n lon) where n is a number, and lon is a list-of-numbers
+;;
+;; Examples:
+;; empty
+;; (cons 1 empty)
+;; (cons 1 (cons 4 empty))
+;;
+;; Template for list-of-numbers
+#|
+;;lon-f : list-of-numbers -> ...
+(define (lon-f ... a-lon ...)
+  (cond
+    [(empty? a-lon) ...]
+    [(cons? a-lon) ... (first a-lon) ...
+                   ... (lon-f ... (rest a-lon) ...) ... ]))
+|#
+</pre>
+</td></tr>
+</table>
+                    </li>
+			        </ul>
+			    </li>
+				<li>
+				    You must include a data definition and corresponding template for each form of data processed used in your homework submissions unless instructed otherwise. You only need to include a data definition and corresponding template once for an assignment, not once for every problem that uses that data defintion.</li>
+                <li>
+                    The template for writing a function that processes a particular kind of data (data type) is based <strong>only</strong> on the corresponding data definition, <strong>not</strong> on the particular functions that you happen define on that type.  Hence, there is only one template per data type. This same template is used as the starting point for writing all functions that process that data type.
+                </li>
+                <li>
+					If the type is a structure, the template should include the field extraction operations. If the type is a union, the template needs to have an appropriate <code>cond</code> statement(see Example 3). If the type is recursive, the template includes the expected recursive calls on the recursive data components (see Example 2).
+                </li>
+                </ul>
+            </li>
+            <li><h4>2. Function Definitions and Tests</h4>
+                <ul>
+                <li>
+				    To write a function definition, you simply fill in the slots (dots) in the template instantiation for the function.  The template specifies how constructed    data is decomposed in the process of computing the answer.  It does not specify how primitive constants are manipulated or how you use the answers returned from recursive calls are used to assemble answers for compound inputs.  This is where you need apply some ingenuity, but it typically is straightforward.  the hard part was determining how to define the requisite forms of data, what help functions are needed, and what the template instantiation is for each function. In following the design recipe, you make those decisions before writing the concrete code for your solution. A few simple examples follow.
+	                <li>
+					    Programming Example 3: Function definition for <em>computing area of a ring</em> using a degenerate template.  This example is a grubby because it 
+					    involves floating point arithmetic which is inexact.  To fully understand it, you need to read the Racket Help Desk documentation for check-expect and check-within.  The check-expect "function" aborts on floating point inputs.  Ignore it if floating point arithmetic lies outside your interest in computing.
+						Beware that all of the ML code that I have seen uses floating point arithmetic.
+<table class="wysiwyg-macro" data-macro-name="code" style="background-image: url(/confluence/plugins/servlet/confluence/placeholder/macro-heading?definition=e2NvZGV9&amp;locale=en_GB&amp;version=2); background-repeat: no-repeat;" data-macro-body-type="PLAIN_TEXT">
+<tr><td class="wysiwyg-macro-body">
+<pre>
+;; Main function: area-of-ring
+;; area-of-ring : positive-real-number positive-real-number -> positive-real-number
+;; Contract: (area-of-ring outer inner) computes the area of a ring whose radius is outer and whose hole has a radius of inner
+;;
+;; Examples:
+;; (area-of-ring 5 3) => (* pi 16) [approximately]
+;; (area-of-ring 5 0) => (* pi 25) [approximately]
+;;
+;; Template Instantiation: degenerate
+#|
+(define (area-of-ring outer inner) ...)
+|#
+;; Code:
+(define (area-of-ring outer inner) (- (area-of-disk outer) (area-of-disk inner)))
+
+;; Test Examples:
+(define epsilon #i1e-20)  ;; 10^(-20), which is a small number compared to numbers in the interval [1,100]
+(check-within (area-of-ring 5 3) (* pi 16) epsilon)
+(check-within (area-of-ring 5 0) (* pi 25) epsilon)  ;; using epsilon here is a bit aggressive; 10^(-19) is more conservative
+
+;; Auxiliary function: area of disk
+;; area-of-disk: non-negative-real-number -> non-negative-real-number
+;; Contract: (area-of-disk radius) computes the area of a disk (circle) of radius r
+;;
+;; Examples:
+;; (area-of-disk 0) => 0
+;; (area-of-disk 1) => pi   ;; pi is a primitive constant
+;; (area-of-disk 5) => pi*25
+;; (area-of-disk 3) => pi*9
+
+;; Template instantiation: degenerate
+#|
+(define (area-of-disk r)  ...)
+|#
+;; code
+(define (area-of-disk r) (* pi r r))   ;; (* accepts any non-negative number of arguments)
+
+;; Test Examples:
+(check-within (area-of-disk 0) 0 epsilon)
+(check-within (area-of-disk 1) pi epsilon)
+(check-within (area-of-disk 5) (* pi 25) epsilon)
+(check-within (area-of-disk 3) (* pi 9) epsilon)
+</pre>
+</td></tr>
+</table>
+                    </li>
+                    <li>Programming Example 4: Function definition for <em>computing product of list-of-number</em>:
+<table class="wysiwyg-macro" data-macro-name="code" style="background-image: url(/confluence/plugins/servlet/confluence/placeholder/macro-heading?definition=e2NvZGV9&amp;locale=en_GB&amp;version=2); background-repeat: no-repeat;" data-macro-body-type="PLAIN_TEXT">
+<tr>
+<td class="wysiwyg-macro-body">
+<pre>
+;; product-of-lon : list-of-numbers -> number
+;; Contract: (product-of-lon alon) computes the product of the numbers in the list alon
+;; assuming product of empty list is 1
+
+;; Examples:
+;; (product-of-lon empty) => 1
+;; (product-of-lon (cons 2 empty)) => 2
+;; (product-of-lon (cons 3 (cons 2 empty))) => 6
+
+;; Template instantiation
+#|
+(define (product-of-lon a-lon)
+(cond
+  [(empty? a-lon) ...]
+  [(cons? a-lon) ... (first a-lon) ...
+                 ... (product-of-lon (rest a-lon)) ... ]))
+|#
+
+;; Code
+(define (product-of-lon a-lon)
+  (cond
+    [(empty? a-lon) 1]
+    g[(cons? a-lon) (* (first a-lon)
+                       (product-of-lon (rest a-lon)))]))
+
+;; Test Examples:
+(check-expect (product-of-lon empty) 1)
+(check-expect (product-of-lon (cons 2 empty)) 2)
+(check-expect (product-of-lon (cons 3 (cons 2 empty))) 6)
+(check-expect (product-of-lon (cons 7 (cons 5 (cons 2 empty)))) 70)
+</pre>
+</td></tr>
+</table>
+                    </li>
+                    </ul>
+                </li>
+
+                <li>Remember to follow the design recipe.</li>
+                <li>It is important that things are presented in the order given in the recipe, so that is clear that you are following the design process.</li>
+                <li>
+				    You are allowed to use the <code><strong>equal?</strong></code> test <strong>only</strong> for testing. You are not allowed to use it anywhere else in the    code, because it is a library function that relies on extensive recursion to "walk" its two data object arguments until a discrepancy is found.</li>
+                <li>
+				    If your examples get too big, then simply <code>define</code> a name for that big argument somewhere before you use it. You can use this name both in your comments in the example section and in the test cases in the Tests section.</li>
+                <li>
+				    Be sure to test each function throughly. Boundary cases are particularly important. For example, when dealing with numerical functions, <code>0</code> and <code>1</code> are often good test input values.</li>
+                <li>When testing lists, make sure you test the following cases:
+                    <ul>
+	                <li>the empty list: <code><strong>empty</strong></code></li>
+	                <li>a list with one element: ex: <code><strong>(cons 3 empty)</strong></code></li>
+	                <li>a list with more than one element: ex: <code><strong>(cons 1 (cons 3 (cons 3 (cons 7 empty))))</strong></code></li>
+	                </ul>
+                </li>
+                <li>
+				    Local functions cannot be directly (individually) tested, so specific tests are not required for them. However, your enclosing function tests need to be comprehensive enough to implicitly test any local functions. Complex local functions are generally a bad idea because they cannot be directly tested.</li>
+                </ul>
+            </li>
+            <li><h4>Sample Solution to a Programming Problem</h4>
+               <ul>
+			   <li>
+               The following program is a good solution to the problem of sorting a list of numbers into ascending order; it pulls together all of the specific pieces of design documentation, code documentation, and testing mentioned above. It would be better if it included a few more appropriately chosen tests.</p>
+<table class="wysiwyg-macro" data-macro-name="code" style="background-image: url(/confluence/plugins/servlet/confluence/placeholder/macro-heading?definition=e2NvZGV9&amp;locale=en_GB&amp;version=2); background-repeat: no-repeat;" data-macro-body-type="PLAIN_TEXT">
+<tr>
+<td class="wysiwyg-macro-body">
+<pre>
+;; COMP 311 HW #Sample
+;; Corky Cartwright &lt;cork@rice.edu>
+
+;; A list-of-numbers is either:
+;;   empty, or
+;;   (cons n alon) where n is a number and alon is a list-of-numbers
+;;
+;; Examples:
+;;   empty
+;;   (cons 10 (cons -1 (cons 5 empty))) = '(10 -1 5)  (which can also be written as (list 10 -1 5); the list function takes an arbitrary number of arguments)bb
+;;   (cons 1 (cons 2 (cons 3 empty)))   = '(1 2 3)
+;;   (cons 3 (cons 2 (cons 1 empty)))   = '(3 2 1)
+
+#| Template: (enclosed in block comment brackets)
+   (define (lon-f ... a-lon ...)
+     (cond
+       [(empty? a-lon) ...]
+       [(cons? a-lon) ... (first a-lon) ...
+                      ... (lon-f ... (rest a-lon) ...) ... ]))
+|#
+
+;; Main function: sort
+
+;; Type and Contract:
+;; sort: list-of-numbers -> list-of-numbers
+;; Contract: (sort alon) returns the a list with same elements (including duplicates) as alon but in ascending order.
+
+;; Examples:
+;; (sort empty) = empty
+;; (sort '(0)) = '(0)
+;; (sort '(1 2 3)) = '(1 2 3)
+;; (sort '(3 2 1)) = '(1 2 3)
+;; (sort '(10 -1 10 -20 5)) = (-20 -1 5 10 10)
+
+#| Template Instantiation:
+   (define (sort a-lon)
+     (cond
+       [(empty? a-lon) ...]
+       [(cons? a-lon) ... (first a-lon) ...
+                      ... (sort (rest a-lon)) ... ]))
+|#
+;; Code:
+
+   (define (sort a-lon)
+     (cond
+       [(empty? a-lon) empty]
+       [(cons? a-lon) (insert (first a-lon) (sort (rest a-lon)))]))
+
+;; Tests
+(check-expect (sort empty) empty)
+(check-expect (sort '(0)) '(0))
+(check-expect (sort '(1 2 3)) '(1 2 3))
+(check-expect (sort '(3 2 1)) '(1 2 3))
+(check-expect (sort '(10 -1 10 -20 5)) '(-20 -1 5 10 10))
+
+;; Auxiliary function
+
+;; Type and Contract
+;; insert: number list-of-numbers -> list-of-numbers
+;; Contract: (insert n alon), where alon is in increasing order, returns a list 
+;; containing the element n and the elts of alon in ascending order
+
+;; Examples:
+
+;;  (insert 17 empty) = '(17)
+;;  (insert 17 '(17)) = '(17 17)
+;;  (insert 4 '(1 2 3)) = '(1 2 3 4)
+;;  (insert 0 '(1 2 3)) = '(0 1 2 3)
+;;  (insert 2 '(1 1 3 4)) = '(1 1 2 3 4)
+
+#| Template instantiation
+   (define (insert n a-lon)
+     (cond
+       [(empty? a-lon) ...]
+       [(cons? a-lon) ... (first a-lon) ...
+                      ... (insert n (rest a-lon)) ... ]))
+|#
+
+;; Code
+   (define (insert n a-lon)
+     (cond
+       [(empty? a-lon) (cons n empty)]
+       [(cons? a-lon)
+        (if (= n (first a-lon)) (cons n a-lon)
+            (cons (first a-lon) (insert n (rest a-lon))))]))
+;; Tests
+
+(check-expect (insert 17 empty) '(17))
+(check-expect (insert 17 '(17)) '(17 17))
+(check-expect (insert 4 '(1 2 3)) '(1 2 3 4))
+(check-expect (insert 0 '(1 2 3)) '(0 1 2 3))
+(check-expect (insert 2 '(1 1 3 4)) '(1 1 2 3 4))
+</pre>
+</td></tr>
+</table>
+				</li>
+				<li>
+                    <strong>Note</strong>: the Examples and Tests for each function above can be collapsed into a single entry by cutting out each Tests block and pasting it over the corresponding Examples block. Forward references in <code>check-expect</code> invocations work because the execution of <code>check-expect</code> code is deferred to the end of the contents of the definitions pane. For example, the <code>Auxiliary function</code> part can be rewritten as follows:
+<table class="wysiwyg-macro" data-macro-name="code" style="background-image: url(/confluence/plugins/servlet/confluence/placeholder/macro-heading?definition=e2NvZGV9&amp;locale=en_GB&amp;version=2); background-repeat: no-repeat;" data-macro-body-type="PLAIN_TEXT"><tr><td class="wysiwyg-macro-body">
+<tr><td>
+<pre>
+;; Auxiliary function
+
+;; Type and Contract
+;; insert: number list-of-numbers -> list-of-numbers
+;; Contract: (insert n alon), where alon is in increasing order, returns a list containing n and the elts of alon in ascending order
+
+;; Examples and Tests:
+
+(check-expect (insert 17 empty) '(17))
+(check-expect (insert 17 '(17)) '(17 17))
+(check-expect (insert 4 '(1 2 3)) '(1 2 3 4))
+(check-expect (insert 0 '(1 2 3)) '(0 1 2 3))
+(check-expect (insert 2 '(1 1 3 4)) '(1 1 2 3 4))
+
+#| Template instantiation
+   (define (insert n a-lon)
+     (cond
+       [(empty? a-lon) ...]
+       [(cons? a-lon) ... (first a-lon) ...
+                      ... (insert n (rest a-lon)) ... ]))
+|#
+
+;; Code
+   (define (insert n a-lon)
+     (cond
+       [(empty? a-lon) (cons n empty)]
+       [(cons? a-lon)
+        (if (&lt;= n (first a-lon)) (cons n a-lon)
+            (cons (first a-lon) (insert n (rest a-lon))))]))
+</pre>
+</td>
+</tr>
+</table>
+                </li>
+			    </ul>
+            <li><h4>4. Termination Argument: (For Chapter 23 onwards only)</h4>
+                If the template does not guarantee that a function terminates, you are required to explain why that function will terminate for all possible inputs.
+<p>Programming Example 5: Termination argument for <code>quick-sort</code>:
+<table class="wysiwyg-macro" data-macro-name="code" style="background-image: url(/confluence/plugins/servlet/confluence/placeholder/macro-heading?definition=e2NvZGV9&amp;locale=en_GB&amp;version=2); background-repeat: no-repeat;" data-macro-body-type="PLAIN_TEXT"><tr><td class="wysiwyg-macro-body">
+<pre>
+      ;; quick-sort list-of-number -> list-of-number
+      ;; Contract: (quick-sort lon) sorts lon into ascending order
+      ;;
+      ;; Examples:
+      ;; (quick-sort empty) => empty
+      ;; (quick-sort '(1)) => '(1)
+      ;; (quick-sort '(1 4 3 5)) => '(1 3 4 5)
+      ;; (quick-sort '(1 4 3 4 2 5)) => '(1 2 3 4 4 5)
+      ;;
+      ;; Termination:
+      ;; On each call, quick-sort partitions the list alon into three sublists using
+      ;; smaller-than, larger-than, and equal-to.  The lists produced by smaller-than
+      ;; and larger-than are sorted using recursive applications of quick-sort. Since
+      ;; the lists produced by smaller-than and larger-than are strictly shorter than
+      ;; alon (the given list), quick-sort terminates.
+      (define (quick-sort alon)
+        (cond
+          [(empty? alon) empty]
+          [else (append (quick-sort (smaller-items alon (first alon)))
+                        (equal-to alon (first alon))
+                        (quick-sort (larger-items alon (first alon))))]))
+
+      "Testing quick-sort:"
+      ...
+</pre>
+</td>
+</tr>
+</table>
+			</li>
+            </ul>
+    </li>
+	
+		
+<h2>Expository problems</h2>
+<ul>
+<li>Some homework problems will be conventional expository questions that require a short written answer.</li>
+<li>All of the assigned expository problems should be answered in the same Racket <code>.rkt </code>file as your Racket programming exercises. Of course, you &quot;comment out&quot; each answer either by:
+</li>
+</ul>
+<ol>
+<li style="list-style-type: none;background-image: none;"><ol>
+<li>Beginning each line in the answer to an expository question with the <em>comment escape character </em><strong>; </strong>(semicolon) ; or</li><li>Enclosing the entire expository answer in a Racket <em>comment box</em> created using Racket block comment brackets <strong><code>#|</code></strong> and <strong><code>|#</code></strong> (sometimes called <em>bookends</em>).</li>
+</ol>
+</li>
+</ol>
+<ul>
+<li>Note that you can create your entire homework file including solutions to expository problems using the DrRacket editor.</li>
+</ul>
+
+<h3>Hand evaluation problems</h3>
+<ul>
+<li>Most expository problems will be hand-evaluation problems where you are asked to evaluate a particular Racket program invocation. You must format your hand evaluation exactly like our examples (except you will need to insert a comment escape character if the evaluation is embedded in a Racket file with executable Racket code.</li>
+<ul>
+<li>Expository Example 1: Hand evaluation
+<table class="wysiwyg-macro" data-macro-name="code" style="background-image: url(/confluence/plugins/servlet/confluence/placeholder/macro-heading?definition=e2NvZGV9&amp;locale=en_GB&amp;version=2); background-repeat: no-repeat;" data-macro-body-type="PLAIN_TEXT">
+<tr>
+<td class="wysiwyg-macro-body">
+<pre>
+    Given  (define poly (lambda (x y) (+ (expt 2 x) y)))
+	
+               (poly 3 5)
+            => ((lambda (x y) (+ (expt 2 x) y)) 3 5)
+            => (+ (expt 2 3) 5))
+            => (+ 8 5)
+            => 13
+</pre>
+</td>
+</tr>
+</table>
+</li>
+
+<li>Expository Example 2: Hand evaluation
+<table class="wysiwyg-macro" data-macro-name="code" style="background-image: url(/confluence/plugins/servlet/confluence/placeholder/macro-heading?definition=e2NvZGV9&amp;locale=en_GB&amp;version=2); background-repeat: no-repeat;" data-macro-body-type="PLAIN_TEXT">
+<tr><td class="wysiwyg-macro-body">
+<pre>
+Given  (define fact (lambda (n) (if (zero? n) 1 (* n (fact (- n 1))))))
+	
+   (fact 4)
+=> (if (zero? 4) 1 (* 4 (fact (- 4 1))))
+=> (if false 1 (* 4 (fact (- 4 1))))
+=> (* 4 (fact (- 4 1)))
+=> (* 4 (fact 3))
+=> (* 4 (if (zero? 3) 1 (* 3 (fact (- 3 1)))))
+=> (* 4 (if false 1 (* 3 (fact (- 3 1)))))
+=> (* 4 (* 3 (fact (- 3 1))))
+=> (* 4 (* 3 (fact 2)))
+=> (* 4 (* 3 (if (zero? 2) 1 (* 2 (fact (- 2 1))))))
+=> (* 4 (* 3 (if false 1 (* 2 (fact (- 2 1))))))
+=> (* 4 (* 3 (* 2 (fact (- 2 1)))))
+=> (* 4 (* 3 (* 2 (fact 1))))
+=> (* 4 (* 3 (* 2 (if (zero? 1) 1 (* 1 (fact (- 1 1)))))))
+=> (* 4 (* 3 (* 2 (if false 1 (* 1 (fact (- 1 1)))))))
+=> (* 4 (* 3 (* 2 (* 1 (fact (- 1 1))))))
+=> (* 4 (* 3 (* 2 (* 1 (fact 0)))))
+=> (* 4 (* 3 (* 2 (* 1 (if (zero? 0) 1 (* 0 (fact (- 0 1))))))))
+=> (* 4 (* 3 (* 2 (* 1 (if true 1 (* 0 (fact (- 0 1))))))))
+=> (* 4 (* 3 (* 2 (* 1 1))))
+=> (* 4 (* 3 (* 2 1)))
+=> (* 4 (* 3 2))
+=> (* 4 6)
+=> 24
+</pre>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+</li>
+</ul>
+</body>
+</html>
